@@ -53,7 +53,7 @@ pca_fit <- prcomp(friends_tf_wide, scale = TRUE, center = TRUE)
 # отберите 20 наиболее значимых переменных (по косинусу, см. документацию к функции)
 # сохраните график как переменную q
 q <- fviz_pca_biplot(pca_fit, 
-                     geom.ind = "text",
+                     geom = c("text"),
                      select.var = list(cos2 = 20),
                      habillage = as.factor(km.out$cluster),
                      col.var = "steelblue",
