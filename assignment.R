@@ -59,6 +59,5 @@ q <- fviz_pca_biplot(pca_fit,
                      habillage = as.factor(km.out$cluster),
                      col.var = "steelblue",
                      alpha.var = 0.3,
-                     repel = TRUE,
                      ggtheme = theme_minimal()) +
   theme(legend.position = "none")
