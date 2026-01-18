@@ -54,6 +54,7 @@ pca_fit <- prcomp(friends_tf_wide, scale = TRUE, center = TRUE)
 # сохраните график как переменную q
 q <- fviz_pca_biplot(pca_fit, 
                      geom = c("text"),
+                     labelsize = 4,
                      select.var = list(cos2 = 20),
                      habillage = as.factor(km.out$cluster),
                      col.var = "steelblue",
