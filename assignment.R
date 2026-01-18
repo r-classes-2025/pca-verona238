@@ -60,4 +60,7 @@ q <- fviz_pca_biplot(pca_fit,
                      col.var = "steelblue",
                      alpha.var = 0.3,
                      ggtheme = theme_minimal()) +
-  theme(legend.position = "none")
+  theme(legend.position = "none") +
+  scale_x_continuous(expand = expansion(mult = 0.2)) +
+  scale_y_continuous(expand = expansion(mult = 0.2)) +
+  coord_cartesian(clip = "off")
